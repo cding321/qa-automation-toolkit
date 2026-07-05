@@ -1,7 +1,7 @@
-def summarize_results(result):
+def summarize_results(results):
     summary = {}
 
-    for r in result:
+    for r in results:
         summary[r] = summary.get(r,0) + 1
 
     return summary
