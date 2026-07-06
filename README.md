@@ -28,3 +28,10 @@ qa-automation-toolkit/
 - Implemented data summary utility
 - Completed 1 Exercism exercise
 - Completed 2 Codewars exercises
+
+### Day 2
+## Tech Stack (Learning)
+- Python
+- Pytest
+- Git & Github
+- Basic QA Automation Framework
