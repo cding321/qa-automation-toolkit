@@ -35,3 +35,14 @@ qa-automation-toolkit/
 - Pytest
 - Git & Github
 - Basic QA Automation Framework
+
+### Day 3
+## Topics Covered
+- pytest test structure
+- pytest.mark.parametrize
+- pytest.param with custom test ids
+- Positive test cases
+- Negative testing with pytest.raises
+- Expected failures with pytest.mark.xfail
+
+
