@@ -1,4 +1,8 @@
 def summarize_results(results):
+
+    if not isinstance(results, list):
+        raise TypeError("results must be a list")
+
     summary = {}
 
     for r in results:
