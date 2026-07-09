@@ -45,4 +45,40 @@ qa-automation-toolkit/
 - Negative testing with pytest.raises
 - Expected failures with pytest.mark.xfail
 
+### Day 5
+## Project Structure
+qa-automation-toolkit/
+│
+├── data/
+│ └── Test data files
+│
+├── utils/
+│ └── Reusable utility functions
+│
+├── tests/
+│ └── Pytest test cases
+│
+├── practice/
+│ └── Learning exercises
+│
+└── README.md
+
+## Learning progress
+Python:
+- Completed Exercism: Black Jack
+- Practiced:
+  - function reuse
+  - boolean logic
+  - conditional statements
+  - Pythonic coding style
+
+Codewars:
+- Keep Hydrated!
+- Century From Year
+
+Practiced:
+- int()
+- //
+- %
+- if/else logic
 
