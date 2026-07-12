@@ -82,3 +82,30 @@ Practiced:
 - %
 - if/else logic
 
+### Day 8
+## Playwright Practice
+
+Practice website:
+https://testautomationpractice.blogspot.com/
+
+Covered elements:
+
+- Textbox
+  - Fill input fields
+  - Verify input values
+
+- Radio Button
+  - Select radio button
+  - Verify checked / unchecked state
+  - Practice role-based locator and exact matching
+
+- Checkbox
+  - Select multiple checkboxes
+  - Verify checkbox state
+
+- Dropdown
+  - Select options from native `<select>`
+  - Verify selected value
+
+- Date Picker
+  - Practice locating and interacting with date input fields
