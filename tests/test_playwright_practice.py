@@ -50,3 +50,11 @@ def test_datepicker1(page:Page):
     page.locator("#datepicker").fill("05/06/2020")
     expect(page.locator("#datepicker")).to_have_value("05/06/2020")
 
+def test_datepicker2(page:Page):
+    page.goto("https://testautomationpractice.blogspot.com/")
+
+    page.locator("#datepicker").click()
+    page.get_by_title("Prev").click()
+    page.locator("#ui-datepicker-div").get_by_text("1",exact=True).click()
+    expect(page.locator("#datepicker")).to_have_value("06/01/2026")
+
