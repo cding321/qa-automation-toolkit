@@ -1,5 +1,7 @@
 from playwright.sync_api import Page, expect
 
+from pages.practice_page import PracticePage
+
 # def test_login_and_url(page: Page):
 #     page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 #
@@ -69,17 +71,28 @@ def test_link_popup(page:Page):
 
 
 def test_table_select(page:Page):
-    page.goto("https://testautomationpractice.blogspot.com/")
+    practice_page = PracticePage(page)
 
-    rows = page.locator("#productTable tr")
-    row1 = rows.filter(has_text="Laptop")
-    checkbox1 = row1.get_by_role("checkbox")
-    checkbox1.check()
-    expect(checkbox1).to_be_checked()
+    practice_page.open()
 
-    next_pg = page.locator(".pagination").get_by_role("link",name="3")
-    next_pg.click()
-    row2 = rows.filter(has_text="Router")
-    checkbox2 = row2.get_by_role("checkbox")
-    checkbox2.check()
-    expect(checkbox2).to_be_checked()
+    practice_page.select_product("Laptop")
+    laptop_row = page.locator("#productTable tr").filter(has_text="Laptop")
+    expect(laptop_row.get_by_role("checkbox")).to_be_checked()
+
+    practice_page.go_to_page("3")
+    practice_page.select_product("Router")
+    router_row = page.locator("#productTable tr").filter(has_text="Router")
+    expect(router_row.get_by_role("checkbox")).to_be_checked()
+
+    # rows = page.locator("#productTable tr")
+    # row1 = rows.filter(has_text="Laptop")
+    # checkbox1 = row1.get_by_role("checkbox")
+    # checkbox1.check()
+    # expect(checkbox1).to_be_checked()
+
+    # next_pg = page.locator(".pagination").get_by_role("link",name="3")
+    # next_pg.click()
+    # row2 = rows.filter(has_text="Router")
+    # checkbox2 = row2.get_by_role("checkbox")
+    # checkbox2.check()
+    # expect(checkbox2).to_be_checked()
