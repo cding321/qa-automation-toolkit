@@ -58,3 +58,28 @@ def test_datepicker2(page:Page):
     page.locator("#ui-datepicker-div").get_by_text("1",exact=True).click()
     expect(page.locator("#datepicker")).to_have_value("06/01/2026")
 
+def test_link_popup(page:Page):
+    page.goto("https://testautomationpractice.blogspot.com/")
+
+    with page.expect_popup() as popup_info:
+        page.get_by_role("link", name="Posts (Atom)").click()
+
+    popup = popup_info.value
+    expect(popup).to_have_url("https://testautomationpractice.blogspot.com/feeds/posts/default")
+
+
+def test_table_select(page:Page):
+    page.goto("https://testautomationpractice.blogspot.com/")
+
+    rows = page.locator("#productTable tr")
+    row1 = rows.filter(has_text="Laptop")
+    checkbox1 = row1.get_by_role("checkbox")
+    checkbox1.check()
+    expect(checkbox1).to_be_checked()
+
+    next_pg = page.locator(".pagination").get_by_role("link",name="3")
+    next_pg.click()
+    row2 = rows.filter(has_text="Router")
+    checkbox2 = row2.get_by_role("checkbox")
+    checkbox2.check()
+    expect(checkbox2).to_be_checked()
