@@ -1,0 +1,5 @@
+username,password,validity
+student,Password123,valid
+student,admin123,invalid
+admin,Password123,invalid
+,,invalid

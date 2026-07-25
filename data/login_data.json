@@ -1,0 +1,22 @@
+[
+  {
+    "username" : "student",
+    "password" : "Password123",
+    "validity" : "valid"
+  },
+  {
+    "username" : "student",
+    "password" : "admin123",
+    "validity" : "invalid"
+  },
+  {
+    "username" : "admin",
+    "password" : "Password123",
+    "validity" : "invalid"
+  },
+  {
+    "username" : "",
+    "password" : "",
+    "validity" : "invalid"
+  }
+]

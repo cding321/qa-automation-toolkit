@@ -109,3 +109,12 @@ Covered elements:
 
 - Date Picker
   - Practice locating and interacting with date input fields
+
+
+### Day 9
+## Data-Driven Login Testing
+- Added data-driven login testing
+- Added login test data in JSON, CSV, and Excel formats
+- Used pytest.mark.parametrize
+- Added valid and invalid login scenarios
+- Used Playwright assertions to verify successful and failed login behavior
