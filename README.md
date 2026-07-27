@@ -118,3 +118,8 @@ Covered elements:
 - Used pytest.mark.parametrize
 - Added valid and invalid login scenarios
 - Used Playwright assertions to verify successful and failed login behavior
+
+### Day 10
+## Reporting
+- Added HTML test report generation
+- Added Allure report integration
