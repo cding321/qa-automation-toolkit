@@ -123,3 +123,29 @@ Covered elements:
 ## Reporting
 - Added HTML test report generation
 - Added Allure report integration
+
+### Day 11
+## CI/CD Integration
+
+- Integrated Jenkins with GitHub repository
+- Configured automated test execution through Jenkins jobs
+- Generated Allure test reports after execution
+- Supported parameterized test execution
+
+## CI/CD Pipeline
+
+This project uses Jenkins to execute automated tests.
+
+Pipeline stages:
+1. Checkout Code
+2. Setup Python Environment
+3. Install Dependencies
+4. Install Playwright Browsers
+5. Clean Previous Reports
+6. Run Pytest Tests
+7. Publish Allure Report
+
+## CI Troubleshooting Notes
+
+- Resolved external website loading timeout issue by adjusting page navigation wait strategy.
+- Verified screenshot capture workflow using expected failure tests.
