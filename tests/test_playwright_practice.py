@@ -47,8 +47,8 @@ def test_listbox(page:Page):
 
     color = page.get_by_label("Colors")
     color.select_option(label="Green")
-    # expect(color).to_have_value("green")
-    expect(color).to_have_value("yellow")
+    expect(color).to_have_value("green")
+    # expect(color).to_have_value("yellow")
     expect(color).not_to_have_value("red")
 
 def test_datepicker1(page:Page):
@@ -65,7 +65,7 @@ def test_datepicker2(page:Page):
     page.locator("#datepicker").click()
     page.get_by_title("Prev").click()
     page.locator("#ui-datepicker-div").get_by_text("1",exact=True).click()
-    expect(page.locator("#datepicker")).to_have_value("06/01/2026")
+    expect(page.locator("#datepicker")).to_have_value("07/01/2026")
 
 def test_link_popup(page:Page):
     page.goto("https://testautomationpractice.blogspot.com/")
