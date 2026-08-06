@@ -14,6 +14,7 @@ from pages.practice_page import PracticePage
 
 def test_radiobutton(page:Page):
     page.goto("https://testautomationpractice.blogspot.com/")
+    wait_until="domcontentloaded"
 
     page.get_by_label("Address").fill("123 happy rd, dallas, TX 77777")
 
@@ -23,6 +24,7 @@ def test_radiobutton(page:Page):
 
 def test_checkbox(page:Page):
     page.goto("https://testautomationpractice.blogspot.com/")
+    wait_until = "domcontentloaded"
 
     page.get_by_role("checkbox", name="Tuesday").check()
     page.get_by_role("checkbox", name="Thursday").check()
@@ -32,6 +34,7 @@ def test_checkbox(page:Page):
 
 def test_dropdown(page:Page):
     page.goto("https://testautomationpractice.blogspot.com/")
+    wait_until = "domcontentloaded"
 
     page.get_by_label("Country").select_option(label="China")
     expect(page.get_by_label("Country")).to_have_value("china")
@@ -40,6 +43,7 @@ def test_dropdown(page:Page):
 
 def test_listbox(page:Page):
     page.goto("https://testautomationpractice.blogspot.com/")
+    wait_until = "domcontentloaded"
 
     color = page.get_by_label("Colors")
     color.select_option(label="Green")
@@ -49,12 +53,14 @@ def test_listbox(page:Page):
 
 def test_datepicker1(page:Page):
     page.goto("https://testautomationpractice.blogspot.com/")
+    wait_until = "domcontentloaded"
 
     page.locator("#datepicker").fill("05/06/2020")
     expect(page.locator("#datepicker")).to_have_value("05/06/2020")
 
 def test_datepicker2(page:Page):
     page.goto("https://testautomationpractice.blogspot.com/")
+    wait_until = "domcontentloaded"
 
     page.locator("#datepicker").click()
     page.get_by_title("Prev").click()
@@ -63,6 +69,7 @@ def test_datepicker2(page:Page):
 
 def test_link_popup(page:Page):
     page.goto("https://testautomationpractice.blogspot.com/")
+    wait_until = "domcontentloaded"
 
     with page.expect_popup() as popup_info:
         page.get_by_role("link", name="Posts (Atom)").click()
