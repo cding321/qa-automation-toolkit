@@ -47,8 +47,8 @@ def test_listbox(page:Page):
 
     color = page.get_by_label("Colors")
     color.select_option(label="Green")
-    expect(color).to_have_value("green")
-    # expect(color).to_have_value("yellow")
+    # expect(color).to_have_value("green")
+    expect(color).to_have_value("yellow")
     expect(color).not_to_have_value("red")
 
 def test_datepicker1(page:Page):
