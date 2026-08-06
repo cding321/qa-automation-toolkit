@@ -12,7 +12,7 @@ def pytest_runtest_makereport(item, call):
     extra = getattr(report, "extra", [])
     if report.when == "call":
         xfail = hasattr(report, "wasxfail")
-        if report.failed or xfail and "page" in item.funcargs:
+        if (report.failed or xfail) and "page" in item.funcargs:
             page = item.funcargs["page"]
             screenshot_dir = Path("screenshots")
             screenshot_dir.mkdir(exist_ok=True)
@@ -22,14 +22,16 @@ def pytest_runtest_makereport(item, call):
         # for attaching the screenshot to the report
         if (report.skipped and xfail) or (report.failed and not xfail):
             # add the screenshots to the html report
-            extra.append(pytest_html.extras.png(screen_file))
+            if screen_file:
+                # add the screenshots to the html report
+                extra.append(pytest_html.extras.png(screen_file))
 
-            # Attach to Allure report
-            allure.attach.file(
-                screen_file,
-                name="Failure Screenshot",
-                attachment_type=allure.attachment_type.PNG
-            )
+                # Attach to Allure report
+                allure.attach.file(
+                    screen_file,
+                    name="Failure Screenshot",
+                    attachment_type=allure.attachment_type.PNG
+                )
 
 
 
