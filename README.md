@@ -149,3 +149,7 @@ Pipeline stages:
 
 - Resolved external website loading timeout issue by adjusting page navigation wait strategy.
 - Verified screenshot capture workflow using expected failure tests.
+
+
+### Day 12
+## Added github workflow action files
