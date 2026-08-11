@@ -1,0 +1,1 @@
+Partial Update Response for bookding id 250 {'firstname': 'Scott', 'lastname': 'Tiger', 'totalprice': 1000, 'depositpaid': True, 'bookingdates': {'checkin': '2025-07-01', 'checkout': '2025-07-05'}, 'additionalneeds': 'lunch'}

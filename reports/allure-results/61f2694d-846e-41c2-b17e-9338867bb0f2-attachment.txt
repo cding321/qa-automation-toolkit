@@ -1,0 +1,1 @@
+Response body =====> {'bookingid': 19075, 'booking': {'firstname': 'Jim', 'lastname': 'Brown', 'totalprice': 1000, 'depositpaid': True, 'bookingdates': {'checkin': '2025-07-01', 'checkout': '2025-07-05'}, 'additionalneeds': 'super bowls'}}

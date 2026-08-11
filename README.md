@@ -152,4 +152,68 @@ Pipeline stages:
 
 
 ### Day 12
-## Added github workflow action files
+## GitHub Actions
+Added GitHub Actions workflow files
+Configured automated pytest execution in GitHub Actions
+Verified test execution on a Linux runner
+Configured Python environment and project dependencies
+Resolved pytest configuration issues in the CI environment
+
+### Day 13
+## API Testing
+Started API testing with Playwright APIRequest
+Practiced sending POST requests
+Validated HTTP response status and response body
+Created API request bodies using JSON files
+Added multiple JSON test data files to the data/ directory
+Created a reusable JSON data loading utility
+Used Faker to generate dynamic test data
+Practiced generating dynamic names, prices, boolean values, and dates
+Added a session-scoped request_context fixture
+Expanded API testing into CRUD operations
+Practiced GET requests for retrieving bookings
+Retrieved booking IDs using:
+Booking ID
+First name and last name
+Check-in and check-out dates
+Practiced using query parameters for API filtering
+Added response status and response body validations
+Built an API CRUD test flow using reusable test data and fixtures
+
+## API Testing Example
+
+The project uses the Restful Booker API for API testing practice:
+
+https://restful-booker.herokuapp.com/
+
+Current API testing coverage includes:
+
+Create Booking API
+POST request
+GET request
+JSON request body
+Dynamic test data with Faker
+Query parameters
+Response status validation
+Response body validation
+Booking data validation
+API CRUD testing
+
+## API Test Flow
+JSON Test Data
+      ↓
+Read JSON
+      ↓
+POST /booking
+      ↓
+Create Booking
+      ↓
+Retrieve Booking ID
+      ↓
+GET /booking/{bookingid}
+      ↓
+GET /booking?firstname=...&lastname=...
+      ↓
+GET /booking?checkin=...&checkout=...
+      ↓
+Validate Responses
