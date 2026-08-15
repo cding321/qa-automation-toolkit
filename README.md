@@ -217,3 +217,9 @@ GET /booking?firstname=...&lastname=...
 GET /booking?checkin=...&checkout=...
       ↓
 Validate Responses
+
+### Day 14
+## API Response Validation
+Headers: Extracted response headers; validated specific values and header presence
+Cookies: Extracted cookies from storage_state(); validated specific cookie existence and properties
+JSON Schema: Used jsonschema.validate() with a reusable helper to validate response structure, required fields, and data types
