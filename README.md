@@ -223,3 +223,14 @@ Validate Responses
 Headers: Extracted response headers; validated specific values and header presence
 Cookies: Extracted cookies from storage_state(); validated specific cookie existence and properties
 JSON Schema: Used jsonschema.validate() with a reusable helper to validate response structure, required fields, and data types
+
+
+### Day 15
+## API Authentication
+
+- Basic Authentication with Playwright APIRequest
+- Bearer Token Authentication with GitHub API
+- API Key Authentication with OpenWeather API
+- Used `python-dotenv` and `.env` to manage API keys and tokens securely
+- Added `.env` to `.gitignore` to prevent credentials from being committed
+- OAuth 2.0 reviewed but not implemented due to the additional real-world authorization flow
