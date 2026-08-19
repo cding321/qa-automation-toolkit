@@ -234,3 +234,15 @@ JSON Schema: Used jsonschema.validate() with a reusable helper to validate respo
 - Used `python-dotenv` and `.env` to manage API keys and tokens securely
 - Added `.env` to `.gitignore` to prevent credentials from being committed
 - OAuth 2.0 reviewed but not implemented due to the additional real-world authorization flow
+
+
+### Day 16
+## AI Testing with GitHub Copilot & Playwright MCP
+
+- Installed and configured GitHub Copilot.
+- Set up and used Playwright MCP for browser automation.
+- Used a natural-language prompt to have AI generate and execute a pytest + Playwright test.
+- Saved the generated test as tests/aitesting/search_product.py and executed it in headed mode.
+
+# Key Takeaway
+- The quality of an AI-generated test depends not only on the prompt, but also on the test environment. A stable and accessible application allows the AI agent to interact with the actual system and generate a test that better reflects the intended scenario.
