@@ -2,6 +2,7 @@ import json
 
 import pytest
 from playwright.sync_api import Playwright
+from tools.generate_test_data import generate_booking
 
 base_url = "https://restful-booker.herokuapp.com"
 
@@ -15,6 +16,12 @@ def request_context(playwright: Playwright):
     context = playwright.request.new_context()
     yield context
     context.dispose()
+
+
+@pytest.fixture
+def generated_bookings(request):
+    count = request.config.getoption("--booking-count")
+    return generate_booking(count)
 
 
 def test_create_booking(request_context):
@@ -130,7 +137,7 @@ def test_full_update_booking(request_context):
     assert response.status == 200
 
     response_body = response.json()
-    print(f"Full Update Response for bookding id {booking_id}", response_body)
+    print(f"Full Update Response for booking id {booking_id}", response_body)
 
     for key in data.keys():
         assert key in response_body
@@ -147,3 +154,31 @@ def test_delete_booking(request_context):
 
     assert response.status == 201
     print("Booking successfully deleted ----> ID", booking_id)
+
+
+def test_create_booking_with_generated_data(request_context,generated_bookings):
+    # data = read_json("data/generated_bookings.json")
+    print(f"Generated bookings:{len(generated_bookings)}")
+
+    for booking_data in generated_bookings:
+        print("sending booking:",booking_data)
+        response = request_context.post(f"{base_url}/booking", data=booking_data)
+
+        assert response.ok, "POST request failed"
+        assert response.status == 200
+
+        response_body = response.json()
+
+        assert "bookingid" in response_body
+        assert "booking" in response_body
+
+        booking = response_body["booking"]
+
+        assert booking["firstname"] == booking_data["firstname"]
+        assert booking["lastname"] == booking_data["lastname"]
+        assert booking["totalprice"] == booking_data["totalprice"]
+        assert booking["depositpaid"] == booking_data["depositpaid"]
+        assert booking["bookingdates"]["checkin"] == booking_data["bookingdates"]["checkin"]
+        assert booking["bookingdates"]["checkout"] == booking_data["bookingdates"]["checkout"]
+        assert booking["additionalneeds"] == booking_data["additionalneeds"]
+

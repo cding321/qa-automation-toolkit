@@ -255,3 +255,11 @@ JSON Schema: Used jsonschema.validate() with a reusable helper to validate respo
 - Added input validation and JSON output generation.
 - Added pytest coverage for data structure, types, date/price validation, CLI behavior, negative testing, and output directory handling.
 - Used pytest fixtures, factory fixtures, and tmp_path for reusable and isolated test execution.
+
+
+### Day 18
+## Dynamic Test Data & API Integration
+- Integrated generated test data with the Restful Booker API.
+- Added API validation to compare generated request data with POST response data.
+- Added --booking-count pytest option to control the number of generated bookings at runtime.
+- Verified dynamic API testing with multiple generated bookings.

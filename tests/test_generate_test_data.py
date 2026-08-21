@@ -17,33 +17,33 @@ def test_generate_booking_count():
 def test_data_comparison():
     bookings = generate_booking(5)
     for booking in bookings:
-        checkin = date.fromisoformat(booking["booking_dates"]["check_in"])
-        checkout = date.fromisoformat(booking["booking_dates"]["check_out"])
+        checkin = date.fromisoformat(booking["bookingdates"]["checkin"])
+        checkout = date.fromisoformat(booking["bookingdates"]["checkout"])
         assert checkout > checkin
 
 
 def test_data_types():
     bookings = generate_booking(5)
     for booking in bookings:
-        assert isinstance(booking["first_name"], str)
-        assert isinstance(booking["last_name"], str)
-        assert isinstance(booking["total_price"], int)
-        assert isinstance(booking["deposit_paid"], bool)
-        assert isinstance(booking["booking_dates"]["check_in"], str)
-        assert isinstance(booking["booking_dates"]["check_out"], str)
-        assert isinstance(booking["additional_needs"], str)
+        assert isinstance(booking["firstname"], str)
+        assert isinstance(booking["lastname"], str)
+        assert isinstance(booking["totalprice"], int)
+        assert isinstance(booking["depositpaid"], bool)
+        assert isinstance(booking["bookingdates"]["checkin"], str)
+        assert isinstance(booking["bookingdates"]["checkout"], str)
+        assert isinstance(booking["additionalneeds"], str)
 
 
 def test_price_range():
     bookings = generate_booking(5)
     for booking in bookings:
-        assert 50 <= booking["total_price"] <= 5000
+        assert 50 <= booking["totalprice"] <= 5000
 
 
 def test_booking_structure():
     bookings = generate_booking(5)
 
-    expected_keys = {"first_name", "last_name", "total_price", "deposit_paid", "booking_dates", "additional_needs"}
+    expected_keys = {"firstname", "lastname", "totalprice", "depositpaid", "bookingdates", "additionalneeds"}
 
     for booking in bookings:
         assert set(booking.keys()) == expected_keys
@@ -52,8 +52,8 @@ def test_booking_structure():
 def test_date_duration():
     bookings = generate_booking(5)
     for booking in bookings:
-        checkin = date.fromisoformat(booking["booking_dates"]["check_in"])
-        checkout = date.fromisoformat(booking["booking_dates"]["check_out"])
+        checkin = date.fromisoformat(booking["bookingdates"]["checkin"])
+        checkout = date.fromisoformat(booking["bookingdates"]["checkout"])
         assert 1 <= (checkout - checkin).days <= 14
 
 

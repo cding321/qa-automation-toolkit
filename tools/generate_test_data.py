@@ -18,15 +18,15 @@ def generate_booking(num_booking):
         check_in = generate_random_date()
         check_out = check_in + timedelta(days=fake.random_int(min=1, max=14))
         booking = {
-            "first_name": fake.first_name(),
-            "last_name": fake.last_name(),
-            "total_price": fake.random_int(min=50, max=5000),
-            "deposit_paid": fake.boolean(),
-            "booking_dates": {
-                "check_in": str(check_in),
-                "check_out": str(check_out)
+            "firstname": fake.first_name(),
+            "lastname": fake.last_name(),
+            "totalprice": fake.random_int(min=50, max=5000),
+            "depositpaid": fake.boolean(),
+            "bookingdates": {
+                "checkin": str(check_in),
+                "checkout": str(check_out)
             },
-            "additional_needs": fake.sentence(nb_words=3)
+            "additionalneeds": fake.sentence(nb_words=3)
         }
         bookings.append(booking)
     return bookings

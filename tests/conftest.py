@@ -36,3 +36,12 @@ def pytest_runtest_makereport(item, call):
 
 
         report.extra = extra
+
+
+def pytest_addoption(parser):
+    parser.addoption(
+        "--booking-count",
+        action="store",
+        type=int,
+        default=5
+    )
