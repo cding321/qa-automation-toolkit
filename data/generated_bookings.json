@@ -1,0 +1,57 @@
+[
+    {
+        "first_name": "Jason",
+        "last_name": "Sanchez",
+        "total_price": 3875,
+        "deposit_paid": false,
+        "booking_dates": {
+            "check_in": "2026-06-21",
+            "check_out": "2026-06-22"
+        },
+        "additional_needs": "Will involve."
+    },
+    {
+        "first_name": "David",
+        "last_name": "Brooks",
+        "total_price": 4396,
+        "deposit_paid": false,
+        "booking_dates": {
+            "check_in": "2025-09-10",
+            "check_out": "2025-09-20"
+        },
+        "additional_needs": "Action throw."
+    },
+    {
+        "first_name": "Michael",
+        "last_name": "Alexander",
+        "total_price": 1138,
+        "deposit_paid": true,
+        "booking_dates": {
+            "check_in": "2026-02-13",
+            "check_out": "2026-02-18"
+        },
+        "additional_needs": "Note fill pretty."
+    },
+    {
+        "first_name": "Rebecca",
+        "last_name": "Hansen",
+        "total_price": 4623,
+        "deposit_paid": true,
+        "booking_dates": {
+            "check_in": "2025-10-08",
+            "check_out": "2025-10-12"
+        },
+        "additional_needs": "Red employee."
+    },
+    {
+        "first_name": "Lisa",
+        "last_name": "Quinn",
+        "total_price": 1628,
+        "deposit_paid": false,
+        "booking_dates": {
+            "check_in": "2026-03-23",
+            "check_out": "2026-04-02"
+        },
+        "additional_needs": "Spring leader him."
+    }
+]

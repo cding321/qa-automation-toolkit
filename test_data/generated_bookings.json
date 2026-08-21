@@ -1,0 +1,24 @@
+[
+    {
+        "first_name": "Mary",
+        "last_name": "West",
+        "total_price": 4821,
+        "deposit_paid": true,
+        "booking_dates": {
+            "check_in": "2026-05-08",
+            "check_out": "2026-05-09"
+        },
+        "additional_needs": "Necessary real mother."
+    },
+    {
+        "first_name": "Tyler",
+        "last_name": "Clark",
+        "total_price": 4700,
+        "deposit_paid": false,
+        "booking_dates": {
+            "check_in": "2026-06-16",
+            "check_out": "2026-06-21"
+        },
+        "additional_needs": "Language science."
+    }
+]

@@ -246,3 +246,12 @@ JSON Schema: Used jsonschema.validate() with a reusable helper to validate respo
 
 # Key Takeaway
 - The quality of an AI-generated test depends not only on the prompt, but also on the test environment. A stable and accessible application allows the AI agent to interact with the actual system and generate a test that better reflects the intended scenario.
+
+
+### Day 17
+## Test Data Generator
+- Built a Python/Faker utility to generate dynamic booking test data.
+- Added CLI support with argparse for configurable record count and output directory.
+- Added input validation and JSON output generation.
+- Added pytest coverage for data structure, types, date/price validation, CLI behavior, negative testing, and output directory handling.
+- Used pytest fixtures, factory fixtures, and tmp_path for reusable and isolated test execution.
