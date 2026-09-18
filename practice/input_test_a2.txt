@@ -1,0 +1,10 @@
+2
+ByteDance International,TikTok USDS|ByteDance North America
+ByteDance North America,TikTok|TikTok Store
+6
+L1,TikTok Store,100.00
+L2,TikTok,50.00
+L3,ByteDance North America,75.00
+L4,Unknown Merchant,20.00
+L5,ByteDance International,4450.00
+L6,Amazon,777.00

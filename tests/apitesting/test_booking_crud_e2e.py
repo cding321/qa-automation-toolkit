@@ -130,7 +130,7 @@ def test_partial_update_booking(request_context):
 
 def test_full_update_booking(request_context):
     data = read_json("data/put_request_body.json")
-    response = request_context.patch(f"{base_url}/booking/{booking_id}",
+    response = request_context.put(f"{base_url}/booking/{booking_id}",
                                      data=data,
                                      headers={"Cookie": f"token={token}"})
     assert response.ok
