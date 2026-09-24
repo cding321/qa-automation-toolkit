@@ -1,0 +1,17 @@
+transaction_id,user_id,amount,status
+T001,U01,100,COMPLETED
+T002,U01,50,FAILED
+T003,U02,200,COMPLETED
+T004,U02,300,COMPLETED
+T005,U03,100,REFUNDED
+T006,U03,150,COMPLETED
+T007,U01,25,COMPLETED
+
+
+customer_id,email,updated_at,status
+1,a@gmail.com,2026-01-01,ACTIVE
+2,b@gmail.com,2026-01-03,ACTIVE
+3,a@gmail.com,2026-01-05,ACTIVE
+4,c@gmail.com,2026-01-02,INACTIVE
+5,b@gmail.com,2026-01-06,ACTIVE
+6,d@gmail.com,2026-01-04,ACTIVE
